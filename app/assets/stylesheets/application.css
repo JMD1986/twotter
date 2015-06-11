@@ -61,3 +61,29 @@ float: left;
 .wraparound {
   padding-top: 32px;
 }
+
+.all_users {
+  padding-top: 50px;
+}
+
+.handle{
+  font-size: 20px;
+  color: red;
+  border: 1px solid black;
+  width: 200px;
+}
+
+.entire_twot{
+  margin: 10px;
+}
+
+.handle a{
+  text-decoration: none;
+}
+
+.twot_text {
+  font-size: 20px;
+  color:gray;
+  border: 1px solid black;
+  width: 200px;
+}
