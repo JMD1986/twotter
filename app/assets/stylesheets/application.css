@@ -13,3 +13,51 @@
  *= require_tree .
  *= require_self
  */
+* {
+  margin:0;
+}
+header {
+  height: 50px;
+  background-color: gray;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+footer {
+  height: 50px;
+  background-color: gray;
+  position: fixed;
+  bottom: 0;
+  width: 100%
+}
+
+
+.footer_text {
+  padding-top: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.Twotter {
+display: inline-block;
+float: left;
+}
+
+.header_tweet{
+  display: inline-block;
+  float: right;
+  padding-top: 15px;
+  font-size: 20px;
+}
+
+.header_tweet a{
+  padding-top: 10px;
+  padding-right: 50px;
+  text-decoration: none;
+  color:white;
+}
+
+.wraparound {
+  padding-top: 32px;
+}

@@ -2,3 +2,41 @@
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+
+<article>
+  <header>
+    <h1><%= @user.name %></h1>
+  </header>
+  <p>
+    <%= raw @user.twot %>
+  </p>
+  <footer>
+    <div class='actions'>
+      <%= link_to 'All Twotterers', users_path %>
+    </div>
+  </footer>
+</article>
+
+<section class='twots'>
+  <h3> Comments (<%= @user.twots.count %>) </h3>
+  <%= form_for(@twot) do |format| %>
+    <%= format.hidden_field :post_id, value: @user.id %>
+    <div>
+      <%= format.label :name %>
+      <%= format.text_field :name %>
+    </div>
+    <div>
+      <%= format.label :twot %>
+      <%= format.text_area :twot %>
+    </div>
+    <%= f.submit "New Twot" %>
+  <% end %>
+  <ul>
+    <% @user.twots.each do |twot| %>
+      <li>
+        <strong><%= twot.name %></strong>:
+        <%= twot.twot %>
+      </li>
+    <% end %>
+  </ul>
+</section>

@@ -1,5 +1,16 @@
-<h1>New User</h1>
+<div class="wraparound">
+<h2>New Twot</h2>
+<%= form_for(@user) do |f| %>
+  <fieldset>
+    <legend>User</legend>
+    <%= f.text_field :name, placeholder: 'Handle', maxlength: 47 %>
+  </fieldset>
 
-<%= render 'form' %>
+  <fieldset>
+    <legend>Twot</legend>
+    <%= f.text_area :twot, rows: 2, cols: 45, placeholder: 'tel the world how smart you are' %>
+  </fieldset>
 
-<%= link_to 'Back', users_path %>
+  <%= f.submit "change the world" %>
+<% end %>
+</div>

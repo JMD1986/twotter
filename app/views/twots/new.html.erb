@@ -1,5 +1,12 @@
 <h1>New Twot</h1>
 
 <%= render 'form' %>
+<%=form_for(@twot) do |format|%>
+    <fieldset>
+    <legend>New Tot</legend>
+    <%= format.text_area :twot, rows: 1, cols: 45, placeholder: 'Tell the world how smart you are' %>
+  </fieldset>
+  <%= format.submit "Twot" %>
 
 <%= link_to 'Back', twots_path %>
+<% end %>

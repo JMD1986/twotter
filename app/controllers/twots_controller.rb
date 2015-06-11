@@ -69,6 +69,6 @@ class TwotsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def twot_params
-      params[:twot]
+      params.require(:twot).permit(:name, :twot, :post_id)
     end
 end
